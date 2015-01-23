@@ -23,4 +23,22 @@ public class RomanNumeralGeneratorImplTest {
         final String numeral = new RomanNumeralGeneratorImpl().generate(3);
         assertThat(numeral, is(equalTo("III")));
     }
+
+    @Test
+    public void shouldConvert4ToIV() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(4);
+        assertThat(numeral, is(equalTo("IV")));
+    }
+
+    @Test
+    public void shouldConvert5ToV() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(5);
+        assertThat(numeral, is(equalTo("V")));
+    }
+
+    @Test
+    public void shouldConvert6ToVI() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(6);
+        assertThat(numeral, is(equalTo("VI")));
+    }
 }

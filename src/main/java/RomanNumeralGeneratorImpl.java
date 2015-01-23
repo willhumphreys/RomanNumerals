@@ -11,6 +11,9 @@ public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator {
         numeralMap.put(1, "I");
         numeralMap.put(2, "II");
         numeralMap.put(3, "III");
+        numeralMap.put(4, "IV");
+        numeralMap.put(5, "V");
+        numeralMap.put(6, "VI");
     }
 
     @Override
