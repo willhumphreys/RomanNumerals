@@ -41,4 +41,28 @@ public class RomanNumeralGeneratorImplTest {
         final String numeral = new RomanNumeralGeneratorImpl().generate(6);
         assertThat(numeral, is(equalTo("VI")));
     }
+
+    @Test
+    public void shouldConvert7ToVII() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(7);
+        assertThat(numeral, is(equalTo("VII")));
+    }
+
+    @Test
+    public void shouldConvert8ToVIII() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(8);
+        assertThat(numeral, is(equalTo("VIII")));
+    }
+
+    @Test
+    public void shouldConvert9ToIX() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(9);
+        assertThat(numeral, is(equalTo("IX")));
+    }
+
+    @Test
+    public void shouldConvert10ToX() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(10);
+        assertThat(numeral, is(equalTo("X")));
+    }
 }
