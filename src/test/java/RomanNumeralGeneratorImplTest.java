@@ -17,4 +17,10 @@ public class RomanNumeralGeneratorImplTest {
         final String numeral = new RomanNumeralGeneratorImpl().generate(2);
         assertThat(numeral, is(equalTo("II")));
     }
+
+    @Test
+    public void shouldConvert3ToIII() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(3);
+        assertThat(numeral, is(equalTo("III")));
+    }
 }

@@ -1,11 +1,16 @@
-public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator{
+public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator {
     @Override
     public String generate(int number) {
 
-        if(number == 1) {
-            return "I";
-        }
+        String result;
 
-        return "II";
+        if (number == 1) {
+            result = "I";
+        } else if (number == 2) {
+            result = "II";
+        } else {
+            result = "III";
+        }
+        return result;
     }
 }
