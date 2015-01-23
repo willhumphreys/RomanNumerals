@@ -9,19 +9,30 @@ public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator {
         numeralMap = new HashMap<Integer, String>();
 
         numeralMap.put(1, "I");
-        numeralMap.put(2, "II");
-        numeralMap.put(3, "III");
         numeralMap.put(4, "IV");
         numeralMap.put(5, "V");
-        numeralMap.put(6, "VI");
-        numeralMap.put(7, "VII");
-        numeralMap.put(8, "VIII");
         numeralMap.put(9, "IX");
         numeralMap.put(10, "X");
     }
 
     @Override
     public String generate(int number) {
-        return numeralMap.get(number);
+
+        int remaining = number;
+        StringBuilder resultBuilder = new StringBuilder();
+        StringBuilder endBuilder = new StringBuilder();
+        while (remaining > 0) {
+
+            final String numeral = numeralMap.get(remaining);
+
+            if (numeral == null) {
+                endBuilder.append("I");
+                remaining--;
+            } else {
+                resultBuilder.append(numeral);
+                remaining -= number;
+            }
+        }
+        return resultBuilder.append(endBuilder).toString();
     }
 }
