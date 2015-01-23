@@ -65,4 +65,16 @@ public class RomanNumeralGeneratorImplTest {
         final String numeral = new RomanNumeralGeneratorImpl().generate(10);
         assertThat(numeral, is(equalTo("X")));
     }
+
+    @Test
+    public void shouldConvert11ToXI() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(11);
+        assertThat(numeral, is(equalTo("XI")));
+    }
+
+    @Test
+    public void shouldConvert16ToXVI() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(16);
+        assertThat(numeral, is(equalTo("XVI")));
+    }
 }
