@@ -1,16 +1,20 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator {
+
+    private final Map<Integer, String> numeralMap;
+
+    public RomanNumeralGeneratorImpl() {
+        numeralMap = new HashMap<Integer, String>();
+
+        numeralMap.put(1, "I");
+        numeralMap.put(2, "II");
+        numeralMap.put(3, "III");
+    }
+
     @Override
     public String generate(int number) {
-
-        String result;
-
-        if (number == 1) {
-            result = "I";
-        } else if (number == 2) {
-            result = "II";
-        } else {
-            result = "III";
-        }
-        return result;
+        return numeralMap.get(number);
     }
 }
