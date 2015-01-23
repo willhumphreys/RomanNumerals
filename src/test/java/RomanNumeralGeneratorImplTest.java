@@ -77,4 +77,22 @@ public class RomanNumeralGeneratorImplTest {
         final String numeral = new RomanNumeralGeneratorImpl().generate(16);
         assertThat(numeral, is(equalTo("XVI")));
     }
+
+    @Test
+    public void shouldConvert2043ToMMXLIII() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(2043);
+        assertThat(numeral, is(equalTo("MMXLIII")));
+    }
+
+    @Test
+    public void shouldConvert526ToDXXVI() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(526);
+        assertThat(numeral, is(equalTo("DXXVI")));
+    }
+
+    @Test
+    public void shouldConvert3999ToMMMCMXCIX() throws Exception {
+        final String numeral = new RomanNumeralGeneratorImpl().generate(3999);
+        assertThat(numeral, is(equalTo("MMMCMXCIX")));
+    }
 }

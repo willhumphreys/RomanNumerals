@@ -8,6 +8,14 @@ public class RomanNumeralGeneratorImpl implements RomanNumeralGenerator {
     public RomanNumeralGeneratorImpl() {
         numeralMap = new LinkedHashMap<Integer, String>();
 
+        numeralMap.put(1000, "M");
+        numeralMap.put(900, "CM");
+        numeralMap.put(500, "D");
+        numeralMap.put(400, "CD");
+        numeralMap.put(100, "C");
+        numeralMap.put(90, "XC");
+        numeralMap.put(50, "L");
+        numeralMap.put(40, "XL");
         numeralMap.put(10, "X");
         numeralMap.put(9, "IX");
         numeralMap.put(5, "V");
